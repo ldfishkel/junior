@@ -1,0 +1,31 @@
+<table class="grilla">
+    <tbody>
+        
+        <tr [class]="getFilaClass(indexFila)" *ngFor="let fila of grilla; let indexFila = index">
+            <td [class]="getCeldaClass(indexCol)" *ngFor="let numero of fila; let indexCol = index">
+                <button class="botonCelda"
+                        (click)="celdaClick(indexFila, indexCol)">
+                    {{ numero > 0 ? numero : '' }}
+                </button>
+            </td>
+        </tr>
+
+
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        
+        <tr class="fila" >
+            <td class="celda" *ngFor="let resto of numerosRestantes; let indexFila = index">
+                <button *ngIf="resto > 0" class="botonCelda" (click)="clickNumeroRestante(indexFila)">
+                    {{ indexFila + 1 }}
+                </button>
+            </td>
+        </tr>
+
+
+    </tbody>
+
+</table>
