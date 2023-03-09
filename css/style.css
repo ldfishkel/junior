@@ -1,0 +1,106 @@
+.key_words {
+    width: 100%;
+    background: linear-gradient(to right, #11998e, #38ef7d);
+    margin: 10px 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.key_words li {
+    border-bottom: 5px solid black;
+    margin-top: 2px;
+    font-weight: bolder;
+    font-size: 2rem;
+    padding-left: 10px
+}
+
+.key_words li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 50%;
+}
+
+#btn_add_key_word {
+    width: 10%;
+    display: inline-block;
+    float: right;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    cursor: pointer;
+    color: #9b9b9b;
+
+}
+#btn_add_key_word:focus {
+    border-bottom: 2px solid #38ef7d;
+    color: #38ef7d;
+}
+
+.form__field {
+    font-family: inherit;
+    width: 90%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    display: inline-block;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #11998e;
+    font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+    box-shadow: none;
+}
+
+/* demo */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #222222;
+}
